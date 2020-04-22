@@ -1,16 +1,23 @@
 :root{
     --gray:#e9e9e9;
     --aguamarina:#10c9c3;
+    --seleccion:#00908b;
+    --colortext:#787878;
+
     --menutitle:15px;
+
+    --textsize:17px;
+    --titlesize:38px;
+    --buttonTextSize:12px;
 }
 *{
     margin: 0px;
     font-family: 'Montserrat', sans-serif;
 }
 .header{
-    margin: 30px 10px;
+    margin: 30px 5%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .menu>a{
     margin: 20px;
@@ -26,17 +33,89 @@
 
 .main{
     background-color: var(--aguamarina);
+    background-image: url("../images/fondo_home.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
     width: 100%;
     height: 90vh;
     position: absolute;
     z-index: -1;
     top: 0;
 }
+.main_title{
+    font-size: var(--titlesize);
+    font-weight: bold;
+    margin: 10px 0px;
+}
+.main_description{
+    font-size: var(--textsize);
+    color: var(--colortext);
+    margin: 0px 0px 5px 0px;
+}
 .main_content{
-    height: 100%;
-    padding: 0px 10% 0px 50%;
+    height: 300px;
+    margin: 250px 10% 0px 50%;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     /* align-items: flex-end; */
+}
+.main_button{
+    width: 150px;  
+    background-color: var(--aguamarina);
+    color: white;
+    border: 0;
+    font-size: var(--buttonTextSize);
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 20px;
+}
+.main_button:hover{
+    background-color: var(--seleccion);
+}
+
+@media (max-width: 1240px){
+    .main{
+        background-size: auto;
+    }
+    .main_content{
+        margin: 200px 10% 0px 50%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .main_content{
+        background-color: #78787833;
+        margin: 200px 10% 0px 50%;
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header{
+        display: block;
+    }
+    .main_content{
+        background-color: #78787833;
+        margin: 150px 0px;
+        display: flex;
+        align-items: flex-end;
+    }
+    .menu{
+        background-color: var(--colortext);
+        display: flex;
+        flex-direction: column;
+        /* visibility: hidden; */
+        display: none;
+    }
+    .menu>a {
+        margin: 0;
+        padding: 20px;
+    }
+    .header_logo:active + .menu{
+        display: flex;
+    }
 }
