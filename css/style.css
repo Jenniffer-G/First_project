@@ -1,0 +1,42 @@
+:root{
+    --gray:#e9e9e9;
+    --aguamarina:#10c9c3;
+    --menutitle:15px;
+}
+*{
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+.header{
+    margin: 30px 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.menu>a{
+    margin: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: var(--menutitle);
+}
+.menu>a:hover{
+    color: var(--aguamarina);
+}
+
+.main{
+    background-color: var(--aguamarina);
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+}
+.main_content{
+    height: 100%;
+    padding: 0px 10% 0px 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: flex-end; */
+}
