@@ -1,5 +1,6 @@
 :root{
     --gray:#e9e9e9;
+    --graysection:#f8f9f9;
     --aguamarina:#10c9c3;
     --seleccion:#00908b;
     --colortext:#787878;
@@ -8,12 +9,21 @@
 
     --textsize:17px;
     --titlesize:38px;
+    --subtitlesize:30px;
     --buttonTextSize:12px;
 }
 *{
     margin: 0px;
     font-family: 'Montserrat', sans-serif;
 }
+h1{
+    font-size: var(--titlesize);
+}
+h2{
+    font-size: var(--subtitlesize);
+}
+
+/* ............Inicio del header............ */
 .header{
     margin: 30px 5%;
     display: flex;
@@ -31,6 +41,7 @@
     color: var(--aguamarina);
 }
 
+/* ............Inicio del main............ */
 .main{
     background-color: var(--aguamarina);
     background-image: url("../images/fondo_home.jpg");
@@ -75,6 +86,32 @@
 }
 .main_button:hover{
     background-color: var(--seleccion);
+}
+
+/* ............Inicio del about............ */
+.about{
+    margin: 90vh 50px 70px 50px;
+    text-align: center;
+    padding-top: 20px;
+}
+.about_container{
+    padding: 20px 20%;
+}
+.about_title{
+    font-size: var(--subtitlesize);
+}
+.about_description, p{
+    font-size: var(--textsize);
+    color: var(--colortext);
+}
+
+/* ............Inicio del skill............ */
+.skills{
+    background-color: var(--graysection);
+}
+.skills_content{
+    display: flex;
+    justify-content: space-between;
 }
 
 @media (max-width: 1240px){
