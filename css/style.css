@@ -112,8 +112,28 @@ h2{
 .skills_content{
     display: flex;
     justify-content: space-between;
+    object-fit: cover;
 }
-
+.skills_title{
+    font-weight: bold;
+    font-size: var(--titlesize);
+}
+.skills_personalskills{
+    padding: 100px;
+}
+.skills_porcentage{
+    margin: 30px 0;
+    font-size: var(--textsize);
+    font-weight: bold;
+}
+.skills_porcentage > span{
+    margin: 40px;
+}
+.skills_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 @media (max-width: 1240px){
     .main{
         background-size: auto;
@@ -154,5 +174,23 @@ h2{
     }
     .header_logo:active + .menu{
         display: flex;
+    }
+
+/* ............Inicio del skill............ */
+    .skills_content{
+        display: block;
+    }
+    .skills_personalskills{
+        padding: 30px;
+    }
+    .skills_ux > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .skills_img img{
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
     }
 }
