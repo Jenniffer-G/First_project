@@ -188,7 +188,7 @@ h2{
     font-size: var(--subtitlesize);
     font-weight: bolder;
     text-transform: uppercase;
-    white-space: 5px;
+    letter-spacing: 2px;
     padding: 45px;
     text-align: center;
     margin: 0;
@@ -214,7 +214,7 @@ h2{
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
-    grid-row-gap: 30px;
+    grid-row-gap: 40px;
 }
 .abilities_content{
     text-align: center;
@@ -235,10 +235,115 @@ h2{
     font-size: var(--textsize);
     text-transform: uppercase;
     font-weight: bolder;
-    white-space: 6px;
+    letter-spacing: 2px;
 }
 .abilities_content-description{
     font-size: var(--textsize);
+}
+
+/* ............Inicio del carrusel............ */
+.carrusel{
+    background-color: var(--aguamarina);
+    margin: 0;
+    padding: 200px 250px;
+    text-align: center;
+}
+.carrusel_text{
+    color: white;
+    font-weight: bold;
+    font-size: var(--subtitlesize);
+    line-height: 65px;
+    
+}
+.carrusel_name{
+    color: white;
+    text-transform: uppercase;
+}
+
+/* ............Inicio del marks............ */
+.marks{
+    margin: 0px;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.marks > img{
+    margin: 30px;
+}
+
+/* ............Inicio del need............ */
+.need{
+    margin: 0px;
+    padding: 100px 200px;
+    background-color: var(--graysection);
+}
+.need_content{
+    padding: 0px 20vh;
+    text-align: center;
+}
+.need_content-text{
+    padding: 0px 80px;
+}
+.need_content-text > h2{
+    font-weight: bolder;
+}
+.need_content-form{
+    margin-top: 45px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr/ 1fr 1fr ;
+}
+.need_content-name{
+    grid-area: 1 / 1 / span 1 / span 1;
+    margin-right: 20px;
+}
+.need_content-email{
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+.need_content-title{
+    grid-area: 2 / 1 / span 1 / span 2;
+}
+.need_content-comment{
+    grid-area: 3 / 1 / span 3 / span 2;
+}
+.need_content-button{
+    display: block;
+    margin: 40px auto;
+}
+.input{
+    height: 50px;
+    padding-left: 30px;
+    font-size: 20px;
+}
+.comment{
+    height: 300px;
+}
+textarea {
+    font-size: 20px;
+    padding: 20px 35px;
+    resize: none;
+}
+
+/* ............Inicio del footer............ */
+.footer{
+    background-color: black;
+    color: white;
+    padding: 50px 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.footer_section_company{
+    flex-grow: 3;
+}
+.footer_section{
+    flex-grow: 1;
+}
+.footer_section ul{
+    list-style-type: none;
+}
+.footer_section li{
+    margin: 20px;
 }
 
 
@@ -252,6 +357,10 @@ h2{
     /* ............Inicio del skill............ */
     .projects{
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+    /* ............Inicio del need............ */
+    .need{
+        padding: 100px;
     }
 }
 
@@ -332,12 +441,73 @@ h2{
     .abilities{
         display: grid;
         grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
+        padding: 25px;
+    }
+
+    /* ............Inicio del carrusel............ */
+    .carrusel{
+        padding: 150px 50px;
+    }
+
+    /* ............Inicio del need............ */
+    .need{
+        margin: 0px;
+        padding: 20px;
+        background-color: var(--graysection);
+    }
+    .need_content{
+        padding: 0px 10vh;
+    }
+    .need_content-form{
+        display: flex;
+        flex-direction: column;
+    }
+    .need_content-name{
+        margin-right: 0px;
+    }
+    .input, .comment{
+        margin: 10px 0px;
+    }
+    
+    /* ............Inicio del need............ */
+    .need_content-button{
+        margin: auto;
+        padding: 20px 30%;
+    }
+    .need_content-text{
+        padding: 0px 0px;
+    }
+
+    /* ............Inicio del footer............ */
+    .footer{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .footer_section_company{
+        flex-shrink: 1;
     }
 }
 
 @media (max-width: 494px) {
+    /* ............Inicio del skill............ */
+    .projects{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+        
     .abilities{
         display: grid;
         grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr;
+    }
+
+    /* ............Inicio del need............ */
+    .need{
+        margin: 0px;
+    }
+    .need_content{
+        padding: 0px;
+    }
+    .need_content-button{
+        margin: auto;
+        padding: 20px 20%;
     }
 }
