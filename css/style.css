@@ -182,6 +182,30 @@ h2{
     object-fit: cover;
 }
 
+/* ............Inicio del load............ */
+.load{
+    background-color: var(--graysection);
+    font-size: var(--subtitlesize);
+    font-weight: bolder;
+    text-transform: uppercase;
+    white-space: 5px;
+    padding: 45px;
+    text-align: center;
+    margin: 0;
+}
+
+/* ............Inicio del process............ */
+.process{
+    margin: 40px;
+    padding: 60px;
+    text-align: center;
+}
+.process_content{
+    padding: 40px 25%;
+}
+.process_img{
+    width: 80%;
+}
 
 @media (max-width: 1240px){
     .main{
@@ -255,5 +279,17 @@ h2{
         display: block;
         padding: 2px;
         padding-left: 15%;
+    }
+
+    /* ............Inicio del process............ */
+    .process{
+        margin: auto;
+        padding: 10px;
+    }
+    .process_content{
+        padding: 40px 5%;
+    }
+    .process_img{
+        width: 100%;
     }
 }
